@@ -1,0 +1,11 @@
+version: "3.10"
+
+services:
+  smsd:
+    image: idual/docker-smstools3
+    restart: unless-stopped
+    devices:
+    # Your modem
+      - /dev/ttyUSB1:/dev/ttyUSB1
+    volumes:
+    - /Users/user/Desktop/smstools3:/var/lib/sms
